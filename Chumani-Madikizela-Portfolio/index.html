@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sushain Gupta" />
+    <meta property="og:image" content="./assets/project.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <title>CHUMZ!!!</title>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="./assets/myLogo.jpg" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   
+    
+  </head>
+  <body>
+    <!--Loader-->
+    <div class="loaderDiv">
+      <div class="loader"></div>
+      <p>Loading page</p>
+    </div>
+    <!--Toaster-->
+    <div class="toaster"></div>
+    <!--Div for background-->
+    <div class="bg-div"></div>
+    <!-----------------------
+         HEADER
+         ------------------------->
+    <header class="header" id="header">
+      <div class="logo img">
+        <!-- <img
+          class=""
+          src="https://res.cloudinary.com/dkezwrb3a/image/upload/v1678016307/Portfolio/Untitled_design_2_-PhotoRoom.png-PhotoRoom_atrult.png"
+          alt="logo"
+        /> -->
+        <img src="./assets/myLogo.jpg" class="" alt="logo" />
+      </div>
+      <p class="logo initials" tabindex="1" href=""></p>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              class="navbar-link active"
+              name="home"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="4"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="about"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="5"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="skills"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="6"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="projects"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="7"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="education"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="8"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="experience"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="9"
+              >Experience</a
+            >
+          </li>
+        </ul>
+        <a
+          class="contactBtn button"
+          name="getInTouch"
+          tabindex="10"
+          href="mailto:chumanimadikizela@gmail.com"
+          target="_blank"
+          >Contact</a
+        >
+        <ion-icon
+          tabindex="9"
+          name="close-outline"
+          class="mobile-nav-icon"
+          onclick="toggleNav()"
+        ></ion-icon>
+      </div>
+      <ion-icon
+        tabindex="3"
+        name="menu-outline"
+        class="mobile-nav-icon"
+        onclick="toggleNav()"
+      ></ion-icon>
+    </header>
+    <!-----------------------
+         HOME SECTION
+         ------------------------->
+    <section class="section home-section" id="home" tabindex="42">
+      <div>
+        <h1>Hey, I'm <span class="name">Chumani</span></h1>
+        <p class="aboutShort">
+          I am a fullstack developer.
+        </p>
+        <button
+          class="about-me-btn button"
+          name="about"
+          onclick="scrollToSection(this)"
+          tabindex="2"
+        >
+          About Me
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="">
+        <div class="imgDiv">
+          <img src="./assets/chumza.png" class="profile-image" />
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         ABOUT SECTION
+         ------------------------->
+    <section id="about" class="section about-section" tabindex="11">
+      <div class="about-ill"><img src="./assets/me.png" alt="Memoji" /></div>
+      <div
+        class="aboutMe"
+        data-aos="fade-left"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h2 class="name">Chumani Madikizela</h2>
+        <div class="professionContainer">
+          <!-- <p class="profession">profession 1</p>
+          <p class="profession">profession 2</p> -->
+        </div>
+        <br />
+        <p class="aboutLong">
+        I am enthusiastic, self-motivated, and reliable professional with a strong sense of responsibility and a diligent work ethic.
+        I possesses a mature approach to teamwork and adaptability in challenging situations. Thrives both in collaborative
+        environments and when working independently. i also demonstrates exceptional ability to perform under pressure and consistently
+        meet strict deadlines.
+        </p>
+        <br />
+        <a
+          class="button"
+          href="./assets/myResume.pdf"
+          target="_blank"
+          tabindex="12"
+        >
+          Resume
+          <ion-icon name="document-outline"></ion-icon>
+        </a>
+      </div>
+      <ul
+        class="social-menu"
+        data-aos="fade-left"
+        data-aos-duration="700"
+        data-aos-delay="500"
+        data-aos-once="true"
+      >
+        <li id="linkedin">
+          <a
+            href="https://www.linkedin.com/in/chumani-madikizela-379187139/"
+            aria-label="linkedin"
+            class="linkedin"
+            tabindex="13"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li id="github">
+          <a
+            href="https://github.com/chumani130"
+            aria-label="github"
+            class="github"
+            tabindex="14"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li id="instagram">
+          <a
+            href="https://www.instagram.com"
+            aria-label="instagram"
+            class="instagram"
+            tabindex="15"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li id="twitter">
+          <a
+            href="https://twitter.com/Chumamadikizela"
+            aria-label="twitter"
+            class="twitter"
+            tabindex="16"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
+    <!-----------------------
+         SKILLS SECTION
+         ------------------------->
+    <section class="section skill-section" id="skills" tabindex="17">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          My Skills
+          <!-- <p>Tiles in <span>blue</span> are some of my major skills.</p> -->
+        </h1>
+        <div class="skill-container">
+          <div class="major">
+            <img src="./assets/html.png" alt="Skill image 1" />
+            <p>HTML</p>
+          </div>
+          <div class="major">
+            <img src="./assets/css.png" alt="Skill image 2" />
+            <p>CSS</p>
+          </div>
+          <div class="major">
+            <img src="./assets/javascript.png" alt="Skill image 3" />
+            <p>Javascript</p>
+          </div>
+          <div class="minor">
+            <img src="./assets/nodejs.png" alt="Skill image 4" />
+            <p>Nodejs</p>
+          </div>
+          <div class="minor">
+            <img src="./assets/react.png" alt="Skill image 5" />
+            <p>Reactjs</p>
+          </div>
+          <div class="manor">
+            <img src="./assets/firebase.png" alt="Skill image 6" />
+            <p>Firebase</p>
+          </div>
+          <div class="manor">
+            <img src="./assets/github.png" alt="Skill image 7" />
+            <p>Git and github</p>
+          </div>
+          <div class="manor">
+            <img src="./assets/netlify.png" alt="Skill image 8" />
+            <p>Netlify</p>
+          </div>
+          <div class="major">
+            <img src="./assets/java.png" alt="Skill image 9" />
+            <p>Java</p>
+          </div>
+          <div class="minor">
+            <img src="./assets/python.png" alt="Skill image 10" />
+            <p>Python</p>
+          </div>
+          <div class="minor">
+            <img src="./assets/cpp.png" alt="Skill image 11" />
+            <p>C++</p>
+          </div>
+          <!-- <div class="minor">
+            <img src="./assets/skill.png" alt="Skill image 3" />
+            <p>Skill name 9</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-------------------------
+         PROJECT SECTION
+         ------------------------->
+    <section class="section main project-section" id="projects" tabindex="18">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <div class="section-header">
+          <h1 class="title">
+            My recent work
+            <p class="sectionDesc">
+              Here are a few past projects I've worked on. Want to see more?<a
+                href="mailto:chumanimadikizela@gmail.com"
+                tabindex="22"
+              >
+                Email me ></a
+              >
+            </p>
+          </h1>
+          <img
+            class="ProjectHeaderImage"
+            src="./assets/project-head.png"
+            alt="Project header image"
+          />
+        </div>
+        <div class="project card-container">
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./assets/mzamo.png" alt="Project image" />
+            </div>
+            <br />
+            <h6>Mzamomtsha website</h6>
+            <p class="techstack">
+              <span> Techstack </span> - HTML, CSS, Bootstrap, Javascript
+            </p>
+            <div class="options">
+
+              <a class="githubElem" href="https://github.com/chumani130/Mzamomtsha-Final-main_new/tree/main/Mzamomtsha-Final-main_new" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./assets/bankApp.png" alt="Project image" />
+            </div>
+            <br />
+            <h6>Banking App</h6>
+            <p class="techstack">
+              <span> Techstack </span> - Python
+            </p>
+            <p class="library">
+              <span> Libraries </span> - Tkinter
+            </p>
+            <div class="options">
+    
+              <a class="githubElem" href="https://github.com/chumani130/BankApp" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./assets/taxCal.PNG" alt="Project image" />
+            </div>
+            <br />
+            <h6>Tax Calculator</h6>
+            <p class="techstack">
+              <span> Techstack </span> - Java
+            </p>
+            <p class="library">
+              <span> Libraries </span> - Swing
+            </p>
+            <div class="options">
+              
+              <a class="githubElem" href="https://github.com/chumani130/Tax-Calculator-java" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         EDUCATION SECTIONS
+         ------------------------->
+    <section class="section education-section" id="education" tabindex="23">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          Education
+          <p>These are some of my past qualifications.</p>
+        </h1>
+        <div class="card-container">
+          <div class="card">
+            <!-- <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Course name 1</h6>
+            <p class="instituteName">Institute name 1</p>
+            <p class="instituteDesc">Institute description</p>
+            <br />
+            <p class="status Pursuing">Persuing dd-mm-yyyy</p>
+          </div> -->
+          <div class="card">
+            <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Computer Science</h6>
+            <p class="instituteName">Walter Sisulu University</p>
+            <!-- <p class="instituteDesc">Institute description</p> -->
+            <br />
+            <!-- <p class="status Completed">Completed 13-10-2022</p> -->
+          </div>
+          <!-- <div class="card">
+            <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Course name 3</h6>
+            <p class="instituteName">Institute name 3</p>
+            <p class="instituteDesc">Institute description</p>
+            <br />
+            <p class="status Completed">Persuing dd-mm-yyyy</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-------------------------
+         EXPERIENCE SECTION
+         ------------------------->
+    <section class="section experience-section" id="experience" tabindex="24">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          Experience
+          <p>These are the compaines where I've previously worked.</p>
+        </h1>
+        <div class="expContainer">
+          <ul class="listOfExp">
+            <li class="companyName active" tabindex="${tabindex}">
+              Capacity
+            </li>
+          </ul>
+          <div class="expDesc">
+            <h4 class="expTitle">Internship</h4>
+            <p class="period"> February 2023 - July 2023 (6 Months)</p>
+            <br />
+            <p class="desc">
+              <b>Skills:</b> HTML5 · CSS · JavaScript · Nodejs · Reactjs · Python · java
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         CONTACT FORM
+         ------------------------->
+    <div class="formDiv">
+      <img alt="contact illustration" src="./assets/about.png" />
+      <form id="myform">
+        <div class="user-box">
+          <input type="text" id="name" required /><label for="Name"
+            >Your Name</label
+          >
+        </div>
+        <div class="user-box">
+          <input type="email" id="email" required /><label for="Email"
+            >Email Address</label
+          >
+        </div>
+        <div class="user-box">
+          <textarea id="message" required></textarea
+          ><label for="Message">Enter your message</label>
+        </div>
+        <button type="submit" class="submit-btn button">Submit</button>
+      </form>
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+    <!-----------------------
+         FOOTER SECTION
+         ------------------------->
+    <footer class="footer" tabindex="35">
+      <div class="getInTouch">
+        <h3>Start a project?</h3>
+        <p>
+          Interested in working together? We should queue up a time to chat.
+        </p>
+        <a
+          class="getInTouchBtn button"
+          target="_blank"
+          href="mailto:chumanimadikizela@gmail.com"
+          tabindex="36"
+          >Get in touch</a
+        >
+      </div>
+      <div class="footerParent">
+        <div class="profInfo">
+          <div class="imgDiv">
+            <img src="./assets//myLogo.jpg" alt="Profile Image" />
+          </div>
+          <p>
+            Chumani Madikizela<br />Mail me at
+            <a href="mailto:chumanimadikizela@gmail.com" tabindex="37">chumanimadikizela@gmail@gmail.com</a>
+          </p>
+        </div>
+        <div class="reachMeOut">
+          <h3>Reach me out on</h3>
+          <ul class="social-menu">
+            <li id="linkedin">
+              <a
+                href="https://www.linkedin.com/in/chumani-madikizela-379187139/"
+                class="linkedin"
+                tabindex="38"
+                aria-label="linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li id="github">
+              <a
+                href="https://github.com/chumani130"
+                aria-label="github"
+                class="github"
+                tabindex="39"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li id="instagram">
+              <a
+                href="https://www.instagram.com"
+                aria-label="instagram"
+                class="instagram"
+                tabindex="40"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li id="twitter">
+              <a
+                href="https://twitter.com/Chumamadikizela"
+                aria-label="twitter"
+                class="twitter"
+                tabindex="41"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="developerInfo">
+        Designed by
+        <a href="https://www.linkedin.com/in/chumani-madikizela-379187139/" tabindex="50"
+          >Chumani Madikizela</a
+        >
+      </p>
+    </footer>
+    <!-- Scripts -->
+    <script src="./scripts/commonScript.js"></script>
+    <script src="./scripts/script.js"></script>
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
